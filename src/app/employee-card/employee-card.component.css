@@ -1,0 +1,25 @@
+.card{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    height: 280px;
+    width: 90%;
+    position: relative;
+    -webkit-box-shadow: -1px -4px 14px 0px rgba(0,0,0,0.59);
+    -moz-box-shadow: -1px -4px 14px 0px rgba(0,0,0,0.59);
+    box-shadow: -1px -4px 14px 0px rgba(0,0,0,0.59);
+    
+}
+.size{
+    font-size: 125px;
+}
+.pencil-cursor{
+    font-size: 30px;
+    cursor: pointer;
+}
+.edit{
+    text-align: right;
+}
+p{
+    font-weight: 700;
+}
