@@ -15,4 +15,20 @@ export class EmployeeService {
   DeleteEmployee(id:string){
     return this.httpclient.delete("http://localhost:1234/api/employees/"+parseInt(id));
   }
+  UpdateEmployee(name:string,email:string,id:string,edit:boolean){
+    return this.httpclient.post("http://localhost:1234/api/employees/"+id,
+    {
+      "name":name,
+      "email":email,
+      "edit":edit
+    });
+  }
+  CreateEmployee(){
+    return this.httpclient.put<IEmployee[]>("http://localhost:1234/api/employees/",{});
+  }
+  EditStatus(id:string,edit:boolean){
+    return this.httpclient.put<IEmployee[]>("http://localhost:1234/api/employees/"+id,{
+      "edit":edit
+    });
+  }
 }

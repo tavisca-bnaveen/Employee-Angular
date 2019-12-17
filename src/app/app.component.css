@@ -6,3 +6,16 @@
 .flex-item{
     width: 20%;
 }
+
+.add-employee{
+    border: 2px solid gray;
+    height: fit-content;
+    width: fit-content;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+.plus{
+    font-size: 25px;
+}

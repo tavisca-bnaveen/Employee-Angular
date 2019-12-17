@@ -1,4 +1,8 @@
+<div class="add-employee" (click)="AddEmployee()">
+  <span>Employee</span>&nbsp;
+  <i class="fa fa-plus plus" aria-hidden="true"></i>
+</div>
 <div class="flex-container">
-  <app-employee-card (deleteEvent)="deleteEvent($event)" *ngFor="let employee of EmployeeData" class="flex-item" [id]="employee.id" [name]="employee.name" [email]="employee.email"></app-employee-card>
+  <app-employee-card (deleteEvent)="deleteEvent($event)" *ngFor="let employee of EmployeeData" class="flex-item" [id]="employee.id" [name]="employee.name" [email]="employee.email" [Edit]="employee.edit"></app-employee-card>
 </div>
 

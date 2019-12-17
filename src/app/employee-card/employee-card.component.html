@@ -1,10 +1,26 @@
 <div class="card">
+    
     <div class="edit">
-    <i class="fa fa-pencil pencil-cursor"  aria-hidden="true"  ></i>
+    <i class="fa fa-pencil pencil-cursor"  aria-hidden="true" (click)="edit()" ></i>
     <i class="fa fa-trash-o pencil-cursor" (click)="delete($event)"></i>
     </div>
     <i class="fa fa-user size" aria-hidden="true"></i>
     <p>{{id}}</p>
+    <div *ngIf="IsEdit">
+    
     <p>{{name}}</p>
     <p>{{email}}</p>
+    </div>
+    <div *ngIf="!IsEdit">
+        
+        Name:<input  type="text" value="name" [(ngModel)]="oldname">
+        Email:&nbsp;<input type="text" value="email" [(ngModel)]="oldemail">
+        <p class="flex">
+        
+        <span class="flex-item"><button (click)="Update()">Update</button></span>
+        <span class="flex-item"><button (click)="Close()">Close</button></span>
+        </p>
+        </div>
+    
+    
 </div>
